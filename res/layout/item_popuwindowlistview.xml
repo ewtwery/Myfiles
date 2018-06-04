@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/group_item_height"
+    android:orientation="vertical" >
+
+    <com.xm.Widget.MarqueeTextViewTextView
+        android:id="@+id/groupItem"
+        style="@style/grouplist_item_textview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10px"
+        android:textSize="25sp"
+        android:ellipsize="marquee"
+        android:layout_centerHorizontal="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        />
+
+</LinearLayout>

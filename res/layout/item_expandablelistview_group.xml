@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="#e2e3e2"
+    tools:context="com.example.expandlist.Userset" >
+
+    <TextView
+        android:id="@+id/function"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/add_child"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:drawableLeft="@drawable/add1"
+        android:background="@drawable/btn_selector"
+        android:textSize="25sp" 
+        android:text="创建子条目"
+        android:textColor="#000000" />
+
+</LinearLayout>

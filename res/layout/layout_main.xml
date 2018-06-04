@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+     >
+    
+    
+    <LinearLayout
+        android:id="@+id/slidingmenulayout"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@drawable/slidingmenubg" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerInside"
+                android:src="@drawable/xiaomailogo" />
+
+            <ListView
+                android:id="@+id/slidingmenulist"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:divider="@drawable/slidingmenu_divider"
+                android:listSelector="@drawable/grouplist_item_bg" />
+            
+            <ImageButton 
+                android:id="@+id/connect"
+                android:layout_width="fill_parent"
+                android:layout_height="50px"
+                android:background="#626c71"
+                android:src="@drawable/offline"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20px"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.xm.Widget.DragGridView
+        android:id="@+id/gridview"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:background="@drawable/backg"
+        android:numColumns="5"
+        android:visibility="gone"/>
+    
+    <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="@drawable/backg"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+    </LinearLayout>
+
+</LinearLayout>

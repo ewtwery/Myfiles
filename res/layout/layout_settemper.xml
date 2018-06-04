@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center" >
+
+        <CheckBox
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="T1"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/edit_temp1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_back"
+            android:gravity="center"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textSize="25sp" />
+
+        <CheckBox
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:checked="false"
+            android:text="T2"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/edit_temp2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_back"
+            android:gravity="center"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textSize="25sp" />
+
+        <CheckBox
+            android:id="@+id/switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:checked="false"
+            android:text="T3"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/edit_temp3"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_back"
+            android:gravity="center"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textSize="25sp" />
+
+        <CheckBox
+            android:id="@+id/switch4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:checked="false"
+            android:text="T4"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/edit_temp4"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_back"
+            android:gravity="center"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp" >
+
+        <CheckBox
+            android:id="@+id/switch5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="T5"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/edit_temp5"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_back"
+            android:gravity="center"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textSize="25sp" />
+
+        <CheckBox
+            android:id="@+id/switch6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:checked="false"
+            android:text="T6"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/edit_temp6"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_back"
+            android:gravity="center"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textSize="25sp" />
+
+        <CheckBox
+            android:id="@+id/switch7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:checked="false"
+            android:text="T7"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/edit_temp7"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_back"
+            android:gravity="center"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textSize="25sp" />
+
+        <CheckBox
+            android:id="@+id/switch8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:checked="false"
+            android:text="T8"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/edit_temp8"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_back"
+            android:gravity="center"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+</LinearLayout>

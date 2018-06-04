@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_actionbar" />
+
+    
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/yangben1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/xy"
+                android:background="@drawable/btn_selector"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:textSize="30sp"  />
+
+            <Button
+                android:id="@+id/yangben2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/xjzj"
+                android:background="@drawable/btn_selector"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:textSize="30sp"  />
+
+            <Button
+                android:id="@+id/yangben3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/common"
+                android:background="@drawable/btn_selector"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:textSize="30sp"  />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/yangben4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/dwzz"
+                android:background="@drawable/btn_selector"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:textSize="30sp"  />
+
+            <Button
+                android:id="@+id/yangben5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/zwzz"
+                android:background="@drawable/btn_selector"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:textSize="30sp"  />
+
+            <Button
+                android:id="@+id/yangben6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/xibao"
+                android:background="@drawable/btn_selector"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:textSize="30sp"  />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/yangben7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/bd"
+                android:background="@drawable/btn_selector"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:textSize="30sp"  />
+
+            <Button
+                android:id="@+id/yangben8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/pcr"
+                android:background="@drawable/btn_selector"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:textSize="30sp"  />
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/back_yb"
+                android:background="@drawable/btn_selector"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:text="返回"
+                android:textSize="30sp"  />
+        </LinearLayout>
+    </LinearLayout>
+    
+
+</LinearLayout>

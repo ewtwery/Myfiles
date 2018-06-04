@@ -1,0 +1,761 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/com.example.socketserialport">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/layout_actionbar" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/backg"
+            android:orientation="vertical"
+            android:paddingBottom="15px" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#55003300"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="步骤"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="工位"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="动作"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="振动速度"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="振动幅度"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
+                
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="振动起始位"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="时间"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="联动速度"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="5px"
+                android:background="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <ExpandableListView
+                    android:id="@android:id/list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:drawSelectorOnTop="false"
+                    android:fastScrollEnabled="true" >
+                </ExpandableListView>
+            </LinearLayout>
+
+            <com.xm.Widget.ExpandableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/btn_temperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="热井温度设置"
+                        android:textSize="25sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/open_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/set_temperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1号："
+                            android:textSize="25sp" />
+
+                        <Spinner
+                            android:id="@+id/hw1"
+                            android:layout_width="@dimen/spinner_width"
+                            android:layout_height="@dimen/spinner_height"
+                            android:background="#55ffffff"
+                            android:entries="@array/temperature" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="℃"
+                            android:textSize="25sp" />
+
+                        <com.zcw.togglebutton.ToggleButton
+                            android:id="@+id/heat0set"
+                            android:layout_width="56px"
+                            android:layout_height="30px"
+                            app:tbBorderWidth="0px"
+                            app:tbOffBorderColor="#c4c4c4"
+                            app:tbOffColor="#c4c4c4"
+                            app:tbOnColor="#fa8846" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:text="2号："
+                            android:textSize="25sp" />
+
+                        <Spinner
+                            android:id="@+id/hw2"
+                            android:layout_width="@dimen/spinner_width"
+                            android:layout_height="@dimen/spinner_height"
+                            android:background="#55ffffff"
+                            android:entries="@array/temperature" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="℃"
+                            android:textSize="25sp" />
+
+                        <com.zcw.togglebutton.ToggleButton
+                            android:id="@+id/heat1set"
+                            android:layout_width="56px"
+                            android:layout_height="30px"
+                            app:tbBorderWidth="0px"
+                            app:tbOffBorderColor="#c4c4c4"
+                            app:tbOffColor="#c4c4c4"
+                            app:tbOnColor="#fa8846" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:text="3号："
+                            android:textSize="25sp" />
+
+                        <Spinner
+                            android:id="@+id/hw3"
+                            android:layout_width="@dimen/spinner_width"
+                            android:layout_height="@dimen/spinner_height"
+                            android:background="#55ffffff"
+                            android:entries="@array/temperature" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="℃"
+                            android:textSize="25sp" />
+
+                        <com.zcw.togglebutton.ToggleButton
+                            android:id="@+id/heat2set"
+                            android:layout_width="56px"
+                            android:layout_height="30px"
+                            app:tbBorderWidth="0px"
+                            app:tbOffBorderColor="#c4c4c4"
+                            app:tbOffColor="#c4c4c4"
+                            app:tbOnColor="#fa8846" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:text="4号："
+                            android:textSize="25sp" />
+
+                        <Spinner
+                            android:id="@+id/hw4"
+                            android:layout_width="@dimen/spinner_width"
+                            android:layout_height="@dimen/spinner_height"
+                            android:background="#55ffffff"
+                            android:entries="@array/temperature" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="℃"
+                            android:textSize="25sp" />
+
+                        <com.zcw.togglebutton.ToggleButton
+                            android:id="@+id/heat3set"
+                            android:layout_width="56px"
+                            android:layout_height="30px"
+                            app:tbBorderWidth="0px"
+                            app:tbOffBorderColor="#c4c4c4"
+                            app:tbOffColor="#c4c4c4"
+                            app:tbOnColor="#fa8846" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                            style="@style/ishiden"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5号："
+                            android:textSize="25sp" />
+
+                        <Spinner
+                            android:id="@+id/hw5"
+                            android:layout_width="@dimen/spinner_width"
+                            android:layout_height="@dimen/spinner_height"
+                            android:background="#55ffffff"
+                            android:entries="@array/temperature" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="℃"
+                            android:textSize="25sp" />
+
+                        <com.zcw.togglebutton.ToggleButton
+                            android:id="@+id/heat4set"
+                            android:layout_width="56px"
+                            android:layout_height="30px"
+                            app:tbBorderWidth="0px"
+                            app:tbOffBorderColor="#c4c4c4"
+                            app:tbOffColor="#c4c4c4"
+                            app:tbOnColor="#fa8846" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:text="6号："
+                            android:textSize="25sp" />
+
+                        <Spinner
+                            android:id="@+id/hw6"
+                            android:layout_width="@dimen/spinner_width"
+                            android:layout_height="@dimen/spinner_height"
+                            android:background="#55ffffff"
+                            android:entries="@array/temperature" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="℃"
+                            android:textSize="25sp" />
+
+                        <com.zcw.togglebutton.ToggleButton
+                            android:id="@+id/heat5set"
+                            android:layout_width="56px"
+                            android:layout_height="30px"
+                            app:tbBorderWidth="0px"
+                            app:tbOffBorderColor="#c4c4c4"
+                            app:tbOffColor="#c4c4c4"
+                            app:tbOnColor="#fa8846" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:text="7号："
+                            android:textSize="25sp" />
+
+                        <Spinner
+                            android:id="@+id/hw7"
+                            android:layout_width="@dimen/spinner_width"
+                            android:layout_height="@dimen/spinner_height"
+                            android:background="#55ffffff"
+                            android:entries="@array/temperature" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="℃"
+                            android:textSize="25sp" />
+
+                        <com.zcw.togglebutton.ToggleButton
+                            android:id="@+id/heat6set"
+                            android:layout_width="56px"
+                            android:layout_height="30px"
+                            app:tbBorderWidth="0px"
+                            app:tbOffBorderColor="#c4c4c4"
+                            app:tbOffColor="#c4c4c4"
+                            app:tbOnColor="#fa8846" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:text="8号："
+                            android:textSize="25sp" />
+
+                        <Spinner
+                            android:id="@+id/hw8"
+                            android:layout_width="@dimen/spinner_width"
+                            android:layout_height="@dimen/spinner_height"
+                            android:background="#55ffffff"
+                            android:entries="@array/temperature" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="℃"
+                            android:textSize="25sp" />
+
+                        <com.zcw.togglebutton.ToggleButton
+                            android:id="@+id/heat7set"
+                            android:layout_width="56px"
+                            android:layout_height="30px"
+                            app:tbBorderWidth="0px"
+                            app:tbOffBorderColor="#c4c4c4"
+                            app:tbOffColor="#c4c4c4"
+                            app:tbOnColor="#fa8846" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.xm.Widget.ExpandableLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="热井温度(℃):"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1号:"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/temp1"
+                    android:layout_width="65px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#55ffffff"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="2号:"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/temp2"
+                    android:layout_width="65px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#55ffffff"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="3号:"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/temp3"
+                    android:layout_width="65px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#55ffffff"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="4号:"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/temp4"
+                    android:layout_width="65px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#55ffffff"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5号:"
+                    style="@style/ishiden"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/temp5"
+                    android:layout_width="65px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#55ffffff"
+                    style="@style/ishiden"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="6号:"
+                    style="@style/ishiden"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/temp6"
+                    android:layout_width="65px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#55ffffff"
+                    style="@style/ishiden"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="7号:"
+                    style="@style/ishiden"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/temp7"
+                    android:layout_width="65px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#55ffffff"
+                    style="@style/ishiden"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="8号:"
+                    style="@style/ishiden"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/temp8"
+                    android:layout_width="65px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#55ffffff"
+                    style="@style/ishiden"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:background="#000000" />
+
+            <com.xm.Widget.CustomadeProgressBar
+                android:id="@+id/progressBar"
+                style="@style/ProgressBar_Mini"
+                android:layout_width="400dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50px"
+                android:layout_marginTop="10dp"
+                android:progress="100"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/composer_buttons_wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="70px"
+        android:clipChildren="false"
+        android:clipToPadding="false" >
+        
+        <Button
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="200px"
+            android:layout_marginLeft="70px"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/add"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:text="创建组条目"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="200px"
+            android:layout_marginLeft="180px"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/colla"
+            android:focusableInTouchMode="false"
+            android:text="收起列表"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="200px"
+            android:layout_marginLeft="280px"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/empty"
+            android:focusableInTouchMode="false"
+            android:text="清空"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/implement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="200px"
+            android:layout_marginLeft="380px"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/start"
+            android:focusableInTouchMode="false"
+            android:text="运行"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="200px"
+            android:layout_marginLeft="480px"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/stop"
+            android:focusableInTouchMode="false"
+            android:text="停止"
+            android:textSize="20sp"
+            android:visibility="gone" />
+        
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="200px"
+            android:layout_marginLeft="580px"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/savelist"
+            android:focusableInTouchMode="false"
+            android:text="保存"
+            android:textSize="20sp"
+            android:visibility="gone" />
+        
+		<Button
+            android:id="@+id/saveas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="200px"
+            android:layout_marginLeft="680px"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/save"
+            android:focusableInTouchMode="false"
+            android:text="另存为"
+            android:textSize="20sp"
+            android:visibility="gone" />
+		
+        <Button
+            android:id="@+id/list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="200px"
+            android:layout_marginLeft="780px"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/list"
+            android:focusableInTouchMode="false"
+            android:text="列表"
+            android:textSize="20sp"
+            android:visibility="gone" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/composer_buttons_show_hide_button"
+        android:layout_width="60dp"
+        android:layout_height="57.33333333333333dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/path2_composer_button" >
+
+        <ImageView
+            android:id="@+id/composer_buttons_show_hide_button_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/path2_composer_icn_plus" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/composer_buttons_show_hide_button"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/composer_buttons_show_hide_button"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_selector"
+            android:src="@drawable/shift_up" />
+
+        <ImageButton
+            android:id="@+id/down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_selector"
+            android:src="@drawable/shift_down" />
+
+        <ImageButton
+            android:id="@+id/insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_selector"
+            android:src="@drawable/insert" />
+
+        <ImageButton
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_selector"
+            android:src="@drawable/edit" />
+
+        <ImageButton
+            android:id="@+id/remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_selector"
+            android:src="@drawable/remove" />
+
+        <ImageButton
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_selector"
+            android:src="@drawable/cancel" />
+    </LinearLayout>
+
+</RelativeLayout>

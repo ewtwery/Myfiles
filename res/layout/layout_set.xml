@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backg"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/com.example.socketserialport">
+
+    <include layout="@layout/layout_actionbar" />
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设备"
+        android:textColor="#FFF"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/set_divider" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp" >
+
+        <Button
+            android:id="@+id/light"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/light_on"
+            android:text="照明停止"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/huancitao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/citaodown"
+            android:text="磁套下降"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/reset"
+            android:text="复位"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/UVlamp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/uv_on"
+            android:text="紫外灯"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1号加热器："
+                android:textSize="30sp" />
+
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/heat1"
+                android:layout_width="56px"
+                android:layout_height="30px"
+                app:tbOffColor="#c4c4c4"
+                app:tbOnColor="#fa8846"
+                app:tbOffBorderColor="#c4c4c4"
+                app:tbBorderWidth="0px"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2号加热器："
+                android:textSize="30sp" />
+
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/heat2"
+                android:layout_width="56px"
+                android:layout_height="30px"
+                app:tbOffColor="#c4c4c4"
+                app:tbOnColor="#fa8846"
+                app:tbBorderWidth="0px"
+                app:tbOffBorderColor="#c4c4c4"
+                />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3号加热器："
+                android:textSize="30sp" />
+
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/heat3"
+                android:layout_width="56px"
+                android:layout_height="30px"
+                app:tbOffColor="#c4c4c4"
+                app:tbOnColor="#fa8846"
+                app:tbBorderWidth="0px"
+                app:tbOffBorderColor="#c4c4c4"
+                />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4号加热器："
+                android:textSize="30sp" />
+
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/heat4"
+                android:layout_width="56px"
+                android:layout_height="30px"
+                app:tbOffColor="#c4c4c4"
+                app:tbOnColor="#fa8846"
+                app:tbBorderWidth="0px"
+                app:tbOffBorderColor="#c4c4c4"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+style="@style/ishiden"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5号加热器："
+                android:textSize="30sp" />
+
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/heat5"
+                android:layout_width="56px"
+                android:layout_height="30px"
+                app:tbOffColor="#c4c4c4"
+                app:tbOnColor="#fa8846"
+                app:tbBorderWidth="0px"
+                app:tbOffBorderColor="#c4c4c4"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6号加热器："
+                android:textSize="30sp" />
+
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/heat6"
+                android:layout_width="56px"
+                android:layout_height="30px"
+                app:tbOffColor="#c4c4c4"
+                app:tbOnColor="#fa8846"
+                app:tbBorderWidth="0px"
+                app:tbOffBorderColor="#c4c4c4"
+                />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7号加热器："
+                android:textSize="30sp" />
+
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/heat7"
+                android:layout_width="56px"
+                android:layout_height="30px"
+                app:tbOffColor="#c4c4c4"
+                app:tbOnColor="#fa8846"
+                app:tbOffBorderColor="#c4c4c4"
+                app:tbBorderWidth="0px"
+                />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8号加热器："
+                android:textSize="30sp" />
+
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/heat8"
+                android:layout_width="56px"
+                android:layout_height="30px"
+                app:tbOffColor="#c4c4c4"
+                app:tbOnColor="#fa8846"
+                app:tbOffBorderColor="#c4c4c4"
+                app:tbBorderWidth="0px"
+                />
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+    
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55px"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="风   扇 ："
+                android:textSize="30sp" />
+
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/fan"
+                android:layout_width="56px"
+                android:layout_height="30px"
+                app:tbOffColor="#c4c4c4"
+                app:tbOnColor="#fa8846"
+                app:tbOffBorderColor="#c4c4c4"
+                app:tbBorderWidth="0px"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="系统"
+        android:textColor="#FFF"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/set_divider" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/updateparams"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/cloudupdate"
+            android:text="数据库更新"
+            android:visibility="gone"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/cloudupdate"
+            android:text="系统更新"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector"
+            android:drawableTop="@drawable/admin"
+            android:text="管理员入口"
+            android:textSize="30sp"
+             />
+    </LinearLayout>
+
+</LinearLayout>

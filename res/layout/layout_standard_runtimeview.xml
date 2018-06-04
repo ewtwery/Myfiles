@@ -1,0 +1,2358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.socketserialport"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8c89d"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_actionbar" />
+
+    <LinearLayout
+        android:id="@+id/layout_tab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/liejie"
+            android:layout_width="120dp"
+            android:layout_height="39.82px"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="裂解"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/cizhuhunyun"
+            android:layout_width="150dp"
+            android:layout_height="39.82px"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="磁珠混匀"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/jiehe"
+            android:layout_width="120dp"
+            android:layout_height="39.82px"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="结合"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/xidi1"
+            android:layout_width="120dp"
+            android:layout_height="39.82px"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="洗涤I"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/xidi2"
+            android:layout_width="120dp"
+            android:layout_height="39.82px"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="洗涤Ⅱ"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/xidi3"
+            android:layout_width="120dp"
+            android:layout_height="39.82px"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="洗涤Ⅲ"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/xituo"
+            android:layout_width="120dp"
+            android:layout_height="39.82px"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="洗脱"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/cizhushifang"
+            android:layout_width="150dp"
+            android:layout_height="39.82px"
+            android:background="@drawable/tab_selector"
+            android:gravity="center"
+            android:text="磁珠释放"
+            android:textSize="@dimen/standard_rt_textsize" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#e5b573" >
+
+        <LinearLayout
+            android:id="@+id/layout_liejie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合速度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/fla"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合幅度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/alb"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/tlc"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="静置反应时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/tld"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="振荡起始位"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/vibbottom0"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/vib_bottom"
+                        android:layout_marginLeft="24px"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mm"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="裂解1温度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/tlk1"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/temperature"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="℃"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="裂解2温度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/tlk2"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/temperature"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="℃"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ishiden"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="裂解3温度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/tlk3"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/temperature"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="℃"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    style="@style/ishiden"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="裂解4温度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/tlk4"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/temperature"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="℃"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="裂解1加热器"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <com.zcw.togglebutton.ToggleButton
+                        android:id="@+id/heat0set"
+                        android:layout_width="56px"
+                        android:layout_height="30px"
+                        app:tbBorderWidth="0px"
+                        app:tbOffBorderColor="#c4c4c4"
+                        app:tbOffColor="#c4c4c4"
+                        app:tbOnColor="#fa8846" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="裂解2加热器"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <com.zcw.togglebutton.ToggleButton
+                        android:id="@+id/heat2set"
+                        android:layout_width="56px"
+                        android:layout_height="30px"
+                        app:tbBorderWidth="0px"
+                        app:tbOffBorderColor="#c4c4c4"
+                        app:tbOffColor="#c4c4c4"
+                        app:tbOnColor="#fa8846" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    style="@style/ishiden"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="裂解3加热器"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <com.zcw.togglebutton.ToggleButton
+                        android:id="@+id/heat4set"
+                        android:layout_width="56px"
+                        android:layout_height="30px"
+                        app:tbBorderWidth="0px"
+                        app:tbOffBorderColor="#c4c4c4"
+                        app:tbOffColor="#c4c4c4"
+                        app:tbOnColor="#fa8846" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    style="@style/ishiden"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="裂解4加热器"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <com.zcw.togglebutton.ToggleButton
+                        android:id="@+id/heat6set"
+                        android:layout_width="56px"
+                        android:layout_height="30px"
+                        app:tbBorderWidth="0px"
+                        app:tbOffBorderColor="#c4c4c4"
+                        app:tbOffColor="#c4c4c4"
+                        app:tbOnColor="#fa8846" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_cizhuhunyun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合速度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/fhe"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合幅度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/ahf"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/thg"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="振荡起始位"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/vibbottom1"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/vib_bottom"
+                        android:layout_marginLeft="24px"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mm"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="磁珠吸附时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/thi"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="磁珠转移速度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/vjv"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_jiehe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合速度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/fjm"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合幅度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/ajn"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/tjo"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="振荡起始位"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/vibbottom2"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/vib_bottom"
+                        android:layout_marginLeft="24px"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mm"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="静置反应时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/tjq"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="磁珠吸附时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/tjt"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_xidi1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合速度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/f1A"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合幅度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/a1B"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/t1C"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="振荡起始位"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/vibbottom3"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/vib_bottom"
+                        android:layout_marginLeft="24px"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mm"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="静置反应时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/t1D"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="磁珠吸附时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/t1E"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_xidi2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合速度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/f2G"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合幅度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/a2H"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/t2I"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="振荡起始位"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/vibbottom4"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/vib_bottom"
+                        android:layout_marginLeft="24px"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mm"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="静置反应时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/t2J"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="磁珠吸附时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/t2K"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_xidi3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合速度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/f3M"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合幅度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/a3N"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/t3O"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="振荡起始位"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/vibbottom5"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/vib_bottom"
+                        android:layout_marginLeft="24px"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mm"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="静置反应时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/t3P"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="磁珠吸附时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/t3Q"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="洗涤剂挥发时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/t3R"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_xituo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合速度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/ftS"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合幅度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/atT"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/ttU"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="静置反应时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/ttV"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="磁珠吸附时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/ttW"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="振荡起始位"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/vibbottom6"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/vib_bottom"
+                        android:layout_marginLeft="24px"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mm"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="洗脱1温度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/ttr1"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/temperature"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="℃"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="洗脱2温度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/ttr2"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/temperature"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="℃"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    style="@style/ishiden"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="洗脱3温度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/ttr3"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/temperature"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="℃"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    style="@style/ishiden"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="洗脱4温度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/ttr4"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/temperature"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="℃"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="洗脱1加热器"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <com.zcw.togglebutton.ToggleButton
+                        android:id="@+id/heat1set"
+                        android:layout_width="56px"
+                        android:layout_height="30px"
+                        app:tbBorderWidth="0px"
+                        app:tbOffBorderColor="#c4c4c4"
+                        app:tbOffColor="#c4c4c4"
+                        app:tbOnColor="#fa8846" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="洗脱2加热器"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <com.zcw.togglebutton.ToggleButton
+                        android:id="@+id/heat3set"
+                        android:layout_width="56px"
+                        android:layout_height="30px"
+                        app:tbBorderWidth="0px"
+                        app:tbOffBorderColor="#c4c4c4"
+                        app:tbOffColor="#c4c4c4"
+                        app:tbOnColor="#fa8846" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    style="@style/ishiden"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="洗脱3加热器"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <com.zcw.togglebutton.ToggleButton
+                        android:id="@+id/heat5set"
+                        android:layout_width="56px"
+                        android:layout_height="30px"
+                        app:tbBorderWidth="0px"
+                        app:tbOffBorderColor="#c4c4c4"
+                        app:tbOffColor="#c4c4c4"
+                        app:tbOnColor="#fa8846" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    style="@style/ishiden"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="洗脱4加热器"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <com.zcw.togglebutton.ToggleButton
+                        android:id="@+id/heat7set"
+                        android:layout_width="56px"
+                        android:layout_height="30px"
+                        app:tbBorderWidth="0px"
+                        app:tbOffBorderColor="#c4c4c4"
+                        app:tbOffColor="#c4c4c4"
+                        app:tbOnColor="#fa8846" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_cizhushifang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合速度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/fsY"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合幅度"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/asZ"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/gears"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="挡"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="混合时间"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/tsz"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/min_sec"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="振荡起始位"
+                        android:textSize="@dimen/standard_rt_textsize" />
+
+                    <Spinner
+                        android:id="@+id/vibbottom7"
+                        android:layout_width="@dimen/spinner_width"
+                        android:layout_height="@dimen/spinner_height"
+                        android:background="#55ffffff"
+                        android:entries="@array/vib_bottom"
+                        android:layout_marginLeft="24px"
+                        android:spinnerMode="dialog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mm"
+                        android:textSize="@dimen/standard_rt_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="裂解1:"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/tlk_disk1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#55ffffff"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="℃"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="洗脱1:"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/ttr_disk1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#55ffffff"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="℃"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="裂解2:"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/tlk_disk2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#55ffffff"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="℃"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="洗脱2:"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/ttr_disk2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#55ffffff"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="℃"
+            android:textSize="@dimen/standard_rt_textsize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/ishiden"
+        android:layout_marginTop="3px"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="裂解3:"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/tlk_disk3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#55ffffff"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="℃"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="洗脱3:"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/ttr_disk3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#55ffffff"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="℃"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="裂解4:"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/tlk_disk4"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#55ffffff"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="℃"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="洗脱4:"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:id="@+id/ttr_disk4"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#55ffffff"
+            android:textSize="@dimen/standard_rt_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="℃"
+            android:textSize="@dimen/standard_rt_textsize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="#00000000"
+            android:drawableTop="@drawable/start"
+            android:text="运行"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#00000000"
+            android:drawableTop="@drawable/stop"
+            android:text="停止"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/stl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#00000000"
+            android:drawableTop="@drawable/save"
+            android:text="保存"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/rfl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#00000000"
+            android:drawableTop="@drawable/read"
+            android:text="读取"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/notice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="注:当前页面参数不可编辑！"
+            android:textColor="#f00"
+            android:textSize="20sp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>

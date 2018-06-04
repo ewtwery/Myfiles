@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="libs/pushservice-4.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/zxing.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/android-viewbadger.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/nineoldanimatin.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/sun.misc.BASE64Decoder.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/gson-2.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/mina-core-2.0.16.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/slf4j-api-1.7.21.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/rxbinding-0.3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/rxbinding-appcompat-v7-0.3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/rxbinding-design-0.3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/rxbinding-recyclerview-v7-0.3.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/rxbinding-support-v4-0.3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/RxAndroid.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

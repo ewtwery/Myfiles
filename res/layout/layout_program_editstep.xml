@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="#e8c89d"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="1.2"
+        android:gravity="center_horizontal" 
+        android:orientation="vertical">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#55003300"
+            android:gravity="center"
+            android:text="步骤名称"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:gravity="center" >
+	        <EditText
+	            android:id="@+id/edit_step_name"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:imeOptions="flagNoExtractUi"
+	            android:textSize="25sp" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#000" />
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="0.8"
+        android:gravity="center_horizontal" 
+        android:orientation="vertical">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#55003300"
+            android:gravity="center"
+            android:text="孔位"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:gravity="center" >
+	        <Spinner
+		        android:id="@+id/spin_hole"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#000" />
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal" 
+        android:orientation="vertical">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#55003300"
+            android:gravity="center"
+            android:text="混合速度"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:gravity="center" >
+	        
+	         <Spinner
+		        android:id="@+id/spin_blend_speed"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"/>
+	         
+         </LinearLayout>
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#000" />
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal" 
+        android:orientation="vertical">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#55003300"
+            android:gravity="center"
+            android:text="混合时间"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:gravity="center" >
+        
+	        <EditText
+	            android:id="@+id/edit_blend_time"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:imeOptions="flagNoExtractUi"
+	            android:inputType="number"
+	            android:maxLength="5"
+	            android:textSize="25sp" />
+	        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:text="秒"
+	            android:textSize="25sp" />
+         </LinearLayout>
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#000" />
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal" 
+        android:orientation="vertical">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#55003300"
+            android:gravity="center"
+            android:text="磁吸时间"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:gravity="center" >
+        
+	        <EditText
+	            android:id="@+id/edit_bead_time"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:imeOptions="flagNoExtractUi"
+	            android:inputType="number"
+	            android:maxLength="5"
+	            android:textSize="25sp" />
+	        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:text="秒"
+	            android:textSize="25sp" />
+         </LinearLayout>
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#000" />
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal" 
+        android:orientation="vertical">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#55003300"
+            android:gravity="center"
+            android:text="加热开关"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:gravity="center" >
+        
+	        <Spinner
+		        android:id="@+id/spin_heat"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"/>
+         </LinearLayout>
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#000" />
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal" 
+        android:orientation="vertical">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#55003300"
+            android:gravity="center"
+            android:text="等待时间"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:gravity="center" >
+        
+	        <EditText
+	            android:id="@+id/edit_wait_time"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:imeOptions="flagNoExtractUi"
+	            android:inputType="number"
+	            android:maxLength="5"
+	            android:textSize="25sp" />
+	        
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:text="秒"
+	            android:textSize="25sp" />
+         </LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>
